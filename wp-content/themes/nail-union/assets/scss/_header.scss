@@ -1,0 +1,102 @@
+.top-bar {
+	box-shadow: 0 0 10px rgba(0,0,0,0.3);
+	height: 60px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding-left: 20px;
+
+	&.small-bar {
+		@include breakpoint(medium up){
+			display: none;
+		}
+	}
+
+	&.medium-up-bar {
+		display: none;
+
+		@include breakpoint(medium up){
+			display: flex;
+		}
+	}
+
+	body.home & {
+		height: 70px;
+	}
+
+	.blog-name {
+		font-family: $kavivana;
+		font-size: 24px;
+		height: 100%;		
+	}
+
+	&-left {
+		height: 100%;
+		padding-top: 13px;
+
+		@include breakpoint(medium up){
+			body.home & {
+				padding-top: 17px;
+			}
+		}
+	}
+
+	&-right {
+		height: 100%;
+
+		.menu {
+			height: 100%;
+			&-item {
+				height: 100%;
+				padding-top: 13px;
+
+				&:hover {
+					background-color: $dark-accent;
+
+					a {
+						color: $primary-color;
+					}
+				}
+
+				@include breakpoint(medium up){
+					body.home & {
+						padding-top: 17px;
+					}
+				}
+
+				a {
+					height: 100%;
+					display: inline-block;
+					font-family: $r-med;
+					text-transform: uppercase;
+				}
+			}
+
+			.current-menu-item {
+				background-color: $light-gray;
+
+				&:hover {
+					background-color: $dark-accent;
+
+					a {
+						color: $primary-color;
+					}
+				}
+
+				a {
+					background-color: transparent;
+					color: $primary-color;
+				}
+			}
+		}
+	}
+
+}
+
+
+
+//Off-Canvas Menu Styling
+#offcanvas-menu {
+
+}
