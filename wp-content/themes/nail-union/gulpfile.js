@@ -1,6 +1,6 @@
 'use strict';
 
-var proxy_url = 'http://chelsportfolio.wip/'; // REPLACE THIS WITH YOUR LOCAL DEV URL
+var proxy_url = 'http://nailsite.wip/'; // REPLACE THIS WITH YOUR LOCAL DEV URL
 
 // PUT ALL BOWER JS FILES USED HERE TO BE COMBINED INTO BUILD DIRECTORY
 var bower_files = [

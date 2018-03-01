@@ -26,7 +26,7 @@
 	}
 
 	.blog-name {
-		font-family: $kavivana;
+		font-family: $lora-b;
 		font-size: 24px;
 		height: 100%;		
 	}
@@ -55,7 +55,7 @@
 					background-color: $dark-accent;
 
 					a {
-						color: $primary-color;
+						color: $white;
 					}
 				}
 
@@ -68,7 +68,7 @@
 				a {
 					height: 100%;
 					display: inline-block;
-					font-family: $r-med;
+					font-family: $lora-reg;
 					text-transform: uppercase;
 				}
 			}
