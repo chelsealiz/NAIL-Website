@@ -1,0 +1,58 @@
+.footer {
+	background-color: $dark-accent;
+	color: $white;
+	padding: 50px 20px 40px;
+	text-align: center;
+
+	.footer-holder {
+		@include xy-grid;
+
+		.footer-left {
+			@include xy-cell(12);
+
+			@include breakpoint(medium up){
+				@include xy-cell(6);
+			}
+
+			p {
+				a {
+					color: $white;
+				}
+			}
+		}
+
+		.footer-right {
+			@include xy-cell(12);
+
+			@include breakpoint(medium up){
+				@include xy-cell(6);
+			}
+
+			.social {
+				padding: 10px 0;
+			}
+
+			.important-links {
+				ul {
+					li {
+						display: block;
+						width: 100%;
+
+						&.active {
+					
+							a {
+								color: $primary-color;
+								background-color: transparent;
+								font-family: $os-sbold;
+							}
+						}
+
+						a {
+							//text-decoration: underline;
+						}
+					}
+				}
+			}
+		}
+	}
+}

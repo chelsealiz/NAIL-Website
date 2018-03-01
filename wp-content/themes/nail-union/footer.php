@@ -1,10 +1,11 @@
 <footer class="footer" role="contentinfo">
 	<div class="footer-holder">
 		<div class="footer-left">
+			<?php the_field('address', 'option') ?>
 		</div>
 
 		<div class="footer-right">
-			<div class="social"></div>
+			<div class="social"><a href="<?php the_field('facebook_link', 'option') ?>" class="facebook-link"><i class="fa fa-facebook-f" aria-hidden="true"></i></a></div>
 			<div class="important-links">
 				<?php joints_footer_links(); ?>
 			</div>
@@ -15,17 +16,3 @@
 <?php wp_footer(); ?>
 </body>
 </html> <!-- end page -->
-
-
-
-
-<div id="inner-footer" class="row">
-	<div class="large-12 medium-12 columns">
-		<nav role="navigation">
-
-		</nav>
-	</div>
-	<div class="large-12 medium-12 columns">
-		<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>.</p>
-	</div>
-</div> <!-- end #inner-footer -->
