@@ -77,21 +77,16 @@ $print-transparent-backgrounds: true;
 @include add-foundation-colors;
 
 
-$kavivana: 'kavivanarregular', Helvetica, Roboto, Arial, sans-serif;
-$r-bold: 'robotobold', Helvetica, Roboto, Arial, sans-serif;
-$r-bold-i: 'robotobold_italic', Helvetica, Roboto, Arial, sans-serif;
-$r-italic: 'robotoitalic', Helvetica, Roboto, Arial, sans-serif;
-$r-light: 'robotolight', Helvetica, Roboto, Arial, sans-serif;
-$r-light-i: 'robotolight_italic', Helvetica, Roboto, Arial, sans-serif;
-$r-med: 'robotomedium', Helvetica, Roboto, Arial, sans-serif;
-$r-med-i: 'robotomedium_italic', Helvetica, Roboto, Arial, sans-serif;
-$r-reg: 'robotoregular', Helvetica, Roboto, Arial, sans-serif;
-$r-thin: 'robotothin', Helvetica, Roboto, Arial, sans-serif;
-$r-thin-i: 'robotothin_italic', Helvetica, Roboto, Arial, sans-serif;
+$lora-i: 'loraitalic', Helvetica, Roboto, Arial, sans-serif;
+$lora-b: 'lorabold', Helvetica, Roboto, Arial, sans-serif;
+$lora-b-i: 'lorabold_italic', Helvetica, Roboto, Arial, sans-serif;
+$lora-reg: 'loraregular', Helvetica, Roboto, Arial, sans-serif;
+
+
 
 
 $body-font-family: $r-reg;
-$header-font-family: $kavivana;
+$header-font-family: $lora-reg;
 
 //Color Palate
 $primary-color: #8ec9a0; //Mint
