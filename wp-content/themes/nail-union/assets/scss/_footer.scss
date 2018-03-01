@@ -4,6 +4,11 @@
 	padding: 50px 20px 40px;
 	text-align: center;
 
+	@include breakpoint(medium up){
+		text-align: left;
+		padding: 65px 20px 50px;
+	}
+
 	.footer-holder {
 		@include xy-grid;
 
@@ -26,29 +31,64 @@
 
 			@include breakpoint(medium up){
 				@include xy-cell(6);
+				position: relative;
 			}
 
 			.social {
 				padding: 10px 0;
+				text-align: center;
+
+				a:hover {
+					i {
+						color: $white;
+					}
+				}
 			}
 
 			.important-links {
+
+
 				ul {
+					@include breakpoint(medium up){
+						text-align: center;
+						position: absolute;
+						bottom: 0;
+						left: 0;
+						right: 0;
+						display: inline-block;	
+					}
+
 					li {
 						display: block;
 						width: 100%;
+
+						@include breakpoint(medium up){
+							display: inline-block;
+							width: auto;
+							text-align: center;
+						}
 
 						&.active {
 					
 							a {
 								color: $primary-color;
 								background-color: transparent;
-								font-family: $os-sbold;
+								// font-family: $os-sbold;
+								font-family: $lora-b;
+							}
+						}
+
+						&:hover {
+							a {
+								color: $white;
 							}
 						}
 
 						a {
-							//text-decoration: underline;
+							font-family: $lora-reg;
+							text-transform: uppercase;
+							letter-spacing: 1px;
+							font-size: 16px;
 						}
 					}
 				}
