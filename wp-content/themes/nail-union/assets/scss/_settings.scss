@@ -50,7 +50,7 @@ $global-font-size: 100%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
 $foundation-palette: (
-  primary: #8ec9a0,
+  primary: #c43235,
   secondary: #b6a19e,
   success: #3adb76,
   warning: #ffae00,
@@ -98,8 +98,8 @@ $body-font-family: $os-reg;
 $header-font-family: $lora-reg;
 
 //Color Palate
-$primary-color: #c43235;
-$primary-color-hov: #e62739;
+$primary-red: #c43235;
+$primary-red-hov: #e62739;
 $light-gray: #e9e9e9; // Linen
 $dark-accent: #22252c; // Navy
 

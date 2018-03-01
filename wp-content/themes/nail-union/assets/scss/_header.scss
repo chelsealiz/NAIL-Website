@@ -5,11 +5,38 @@
 	top: 0;
 	left: 0;
 	right: 0;
-	padding-left: 20px;
+
+	@include breakpoint(medium up){
+		padding-left: 20px;
+	}
+	
 
 	&.small-bar {
 		@include breakpoint(medium up){
 			display: none;
+		}
+
+		@include xy-grid;
+
+		.small-cell {
+			@include xy-cell(50%);
+
+			&.left-side {
+				text-align: right;
+
+				#offcanvas-menu-trigger,  #offcanvas-menu-close{
+					display: none;
+
+					&.active {
+						display: inline-block;
+					}
+					
+					i {
+						color: $primary-red;
+						font-size: 25px;
+					}
+				}
+			}
 		}
 	}
 
@@ -80,13 +107,13 @@
 					background-color: $dark-accent;
 
 					a {
-						color: $primary-color;
+						color: $primary-red;
 					}
 				}
 
 				a {
 					background-color: transparent;
-					color: $primary-color;
+					color: $primary-red;
 				}
 			}
 		}
@@ -98,5 +125,27 @@
 
 //Off-Canvas Menu Styling
 #offcanvas-menu {
+	position: absolute;
+	top: 70px;
+	left: 0;
+	right: 0;
+	max-height: 0;
+	background-color: $white;
+	
+	text-align: center;
+	transition: max-height ease-in-out 1000ms;
+	overflow: hidden;
 
+	@include breakpoint(medium up){
+		display: none;
+	}
+
+	&.active {
+		max-height: 1000px;
+		height: auto;
+	}
+
+	ul {
+		padding-top: 10px;
+	}
 }

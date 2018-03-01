@@ -3,6 +3,19 @@ jQuery(document).ready(function($) {
   $(document).foundation();
 
 
+  $('body').on('click', '#offcanvas-menu-trigger', function(){
+    $('#offcanvas-menu').toggleClass('active');
+    $('#offcanvas-menu-trigger').toggleClass('active');
+    $('#offcanvas-menu-close').toggleClass('active');
+  });
+
+  $('body').on('click', '#offcanvas-menu-close', function(){
+    $('#offcanvas-menu').toggleClass('active');
+    $('#offcanvas-menu-trigger').toggleClass('active');
+    $('#offcanvas-menu-close').toggleClass('active');
+  });
+
+
   
   $('.pb-gallery-wrapper').slick({
     prevArrow: '<button type="button" class="slick-arrow slick-prev"><i class="fa fa-angle-left" aria-hidden="true"></i></button>',
