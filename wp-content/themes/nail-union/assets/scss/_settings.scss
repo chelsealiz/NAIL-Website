@@ -83,9 +83,18 @@ $lora-b-i: 'lorabold_italic', Helvetica, Roboto, Arial, sans-serif;
 $lora-reg: 'loraregular', Helvetica, Roboto, Arial, sans-serif;
 
 
+$os-bold: 'open_sansbold', Helvetica, Roboto, Arial, sans-serif;
+$os-bold-i: 'open_sansbold_italic', Helvetica, Roboto, Arial, sans-serif;
+$os-xbold: 'open_sansextrabold', Helvetica, Roboto, Arial, sans-serif;
+$os-xbold-i: 'open_sansextrabold_italic', Helvetica, Roboto, Arial, sans-serif;
+$os-i: 'open_sansitalic', Helvetica, Roboto, Arial, sans-serif;
+$os-light: 'open_sanslight', Helvetica, Roboto, Arial, sans-serif;
+$os-light-i: 'open_sanslight_italic', Helvetica, Roboto, Arial, sans-serif;
+$os-reg: 'open_sansregular', Helvetica, Roboto, Arial, sans-serif;
+$os-sbold: 'open_sanssemibold', Helvetica, Roboto, Arial, sans-serif;
+$os-sbold-i: 'open_sanssemibold_italic', Helvetica, Roboto, Arial, sans-serif;
 
-
-$body-font-family: $r-reg;
+$body-font-family: $os-reg;
 $header-font-family: $lora-reg;
 
 //Color Palate
