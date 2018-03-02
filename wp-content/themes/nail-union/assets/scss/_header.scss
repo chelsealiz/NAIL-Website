@@ -5,6 +5,7 @@
 	top: 0;
 	left: 0;
 	right: 0;
+	z-index: 21;
 
 	@include breakpoint(medium up){
 		padding-left: 20px;
@@ -133,6 +134,7 @@
 	right: 0;
 	max-height: 0;
 	background-color: $white;
+	z-index: 20;
 	
 	text-align: center;
 	transition: max-height ease-in-out 1000ms;

@@ -108,6 +108,44 @@
             "delay": 0
         },
         {
+            "key": "field_5a98bd6ae9641",
+            "label": "Mission Link",
+            "name": "mission_link",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5a98bd75e9642",
+            "label": "Mission Link Text",
+            "name": "mission_link_text",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5a98a95be8806",
             "label": "Representation Title",
             "name": "representation_title",
@@ -262,5 +300,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1519957333
+    "modified": 1519959421
 }

@@ -20,10 +20,11 @@ Template Name: Homepage Template
 			<div class="mission-section">
 				<div class="mission-wrap">
 					<div class="mission-left">
-						<h2 class="mission-title"><?php the_field('mission_section_title') ?></h2>
+						<h2 class="mission-title"><?php the_field('mission_section_title'); ?></h2>
 					</div>
 					<div class="mission-right">
 						<?php the_field('mission_content'); ?>
+						<a href="<?php the_field('mission_link'); ?>" class="mission-btn"><?php the_field('mission_link_text'); ?></a>
 					</div>
 				</div>
 			</div>
@@ -32,17 +33,18 @@ Template Name: Homepage Template
 				<h2 class="represent-title"><?php the_field('representation_title'); ?></h2>
 				<div class="represent-wrap">
 					<div class="represent-left">
-						<img data-interchange="[<?php echo wp_get_attachment_url( get_field('representation_image'), 'medium'); ?>, small], [<?php echo wp_get_attachment_url( get_field('representation_image'), 'large'); ?>, medium]">
+						<img data-interchange="[<?php echo wp_get_attachment_url( get_field('representation_image'), 'small'); ?>, small], [<?php echo wp_get_attachment_url( get_field('representation_image'), 'large'); ?>, medium]">
 						</div>
 						<div class="represent-right">
 							<?php the_field('representation_content'); ?>
+							<a href="<?php the_field('representation_link'); ?>" class="represent-btn"><?php the_field('representation_link_text'); ?></a>
 						</div>
 					</div>
 				</div>
 
 				<!-- Remember to adjust this when it's done b/c this is hardcore dummy content -->
 				<div class='recent-news'>
-					<h2 class="news-title">Recent News</h2>
+					<h2 class="news-section-title">Recent News</h2>
 					<div class="news-wrap">
 						<div class="news-article">
 							<a href="#" class="article-link">
@@ -65,6 +67,9 @@ Template Name: Homepage Template
 								<p class="blurb">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut tellus lorem. Aliquam in sapien et orci condimentum bibendum. Maecenas nec nibh eu tortor dictum cursus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur nec commodo urna. Sed quis nibh ut enim feugiat suscipit.</p>
 							</a>
 						</div>
+					</div>
+					<div class="link-wrap">
+						<a href="/news" class='news-link'>More News</a>
 					</div>
 				</div>
 
