@@ -29,11 +29,11 @@ Template Name: Homepage Template
 				</div>
 			</div>
 
-			<div class="represent-section" style="background-image: url('<?php echo wp_get_attachment_url( get_field('representation_background'), 'full'); ?>');">
+			<div class="represent-section" style="background-image: url('<?php echo wp_get_attachment_image_src( get_field('representation_background'), 'full')[0]; ?>');">
 				<h2 class="represent-title"><?php the_field('representation_title'); ?></h2>
 				<div class="represent-wrap">
 					<div class="represent-left">
-						<img data-interchange="[<?php echo wp_get_attachment_url( get_field('representation_image'), 'small'); ?>, small], [<?php echo wp_get_attachment_url( get_field('representation_image'), 'large'); ?>, medium]">
+						<img src="<?php echo wp_get_attachment_image_src( get_field('representation_image'), 'large')[0]; ?>">
 						</div>
 						<div class="represent-right">
 							<?php the_field('representation_content'); ?>
@@ -48,21 +48,21 @@ Template Name: Homepage Template
 					<div class="news-wrap">
 						<div class="news-article">
 							<a href="#" class="article-link">
-								<a href="https://placeholder.com"><img src="http://via.placeholder.com/300x300"></a>
+								<a href="https://placeholder.com"><img src="http://via.placeholder.com/250x250"></a>
 								<h3 class="news-title">Article Title</h3>
 								<p class="blurb">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut tellus lorem. Aliquam in sapien et orci condimentum bibendum. Maecenas nec nibh eu tortor dictum cursus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur nec commodo urna. Sed quis nibh ut enim feugiat suscipit.</p>
 							</a>
 						</div>
 						<div class="news-article">
 							<a href="#" class="article-link">
-								<a href="https://placeholder.com"><img src="http://via.placeholder.com/300x300"></a>
+								<a href="https://placeholder.com"><img src="http://via.placeholder.com/250x250"></a>
 								<h3 class="news-title">Article Title</h3>
 								<p class="blurb">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut tellus lorem. Aliquam in sapien et orci condimentum bibendum. Maecenas nec nibh eu tortor dictum cursus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur nec commodo urna. Sed quis nibh ut enim feugiat suscipit.</p>
 							</a>
 						</div>
 						<div class="news-article">
 							<a href="#" class="article-link">
-								<a href="https://placeholder.com"><img src="http://via.placeholder.com/300x300"></a>
+								<a href="https://placeholder.com"><img src="http://via.placeholder.com/250x250"></a>
 								<h3 class="news-title">Article Title</h3>
 								<p class="blurb">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut tellus lorem. Aliquam in sapien et orci condimentum bibendum. Maecenas nec nibh eu tortor dictum cursus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur nec commodo urna. Sed quis nibh ut enim feugiat suscipit.</p>
 							</a>

@@ -1,24 +1,33 @@
 body.home {
 
 	.mission-section {
-		max-width: 1800px;
 		padding: 70px 0 60px;
+
+		@include breakpoint(medium up){
+			padding: 120px 0 90px;
+		}
 
 		.mission-wrap {
 			@include xy-grid;
 			padding: 0 10px;
+			max-width: 1100px;
+			margin: auto;
 
 			.mission-left {
 				@include xy-cell(12);
 
 				@include breakpoint(medium up){
-					@include xy-cell(6);
+					@include xy-cell(5);
 				}
 
 				.mission-title {
 					color: $primary-color;
 					text-transform: uppercase;
 					margin-bottom: 0;
+
+					@include breakpoint(medium up){
+
+					}
 				}
 			}
 
@@ -27,7 +36,8 @@ body.home {
 				text-align: center;
 
 				@include breakpoint(medium up){
-					@include xy-cell(6);
+					@include xy-cell(7);
+					text-align: left;
 				}
 
 				p {
@@ -46,6 +56,10 @@ body.home {
 					&:hover {
 						box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
 					}
+
+					@include breakpoint(medium up){
+						margin-top: 55px;
+					}
 				}
 			}
 		}
@@ -57,6 +71,10 @@ body.home {
 		background-position: center;
 		padding: 40px 20px;
 
+		@include breakpoint(medium up){
+			padding: 100px 20px;
+		}
+
 		.represent-title {
 			color: $white;
 			text-transform: uppercase;
@@ -64,6 +82,11 @@ body.home {
 			padding-bottom: 25px;
 			text-align: center;
 			font-size: 28px;
+
+			@include breakpoint(medium up){
+				font-size: 40px;
+				padding-bottom: 45px;
+			}
 		}
 
 		.represent-wrap {
@@ -89,6 +112,8 @@ body.home {
 
 				@include breakpoint(medium up){
 					@include xy-cell(6);
+					padding-top: 0;
+					text-align: left;
 				}	
 
 				p {
@@ -102,7 +127,7 @@ body.home {
 					background-color: $dark-accent;
 					text-transform: uppercase;
 					font-family: $lora-reg;
-					padding: 10px 20px;
+					padding: 12px 50px;
 					margin-top: 20px;
 
 					&:hover {
@@ -117,6 +142,10 @@ body.home {
 		background-color: $light-gray;
 		padding: 50px 0;
 
+		@include breakpoint(medium up){
+			padding: 95px 0;
+		}
+
 		.news-section-title {
 			color: $dark-accent;
 			text-transform: uppercase;
@@ -124,6 +153,11 @@ body.home {
 			padding-bottom: 20px;
 			text-align: center;
 			font-size: 28px;
+
+			@include breakpoint(medium up){
+				font-size: 40px;
+				padding-bottom: 60px;
+			}
 		}
 
 		.news-wrap {
@@ -165,6 +199,11 @@ body.home {
 					text-align: center;
 					font-size: 25px;
 					padding-top: 15px;
+
+					@include breakpoint(medium up){
+						padding-bottom: 25px;
+						padding-top: 20px;
+					}
 				}
 			}
 		}
@@ -180,6 +219,11 @@ body.home {
 				font-family: $lora-reg;
 				padding: 10px 20px;
 				margin-top: 20px;
+
+				@include breakpoint(medium up){
+					padding: 12px 45px;
+					margin-top: 70px;
+				}
 
 				&:hover {
 					box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
@@ -216,9 +260,10 @@ body.home {
 
 		.title {
 			text-align: center;
-			font-family: $lora-b;
+			// font-family: $lora-b;
 			font-size: 35px;
 			letter-spacing: 1px;
+			text-transform: uppercase;
 		}
 	}
 }
