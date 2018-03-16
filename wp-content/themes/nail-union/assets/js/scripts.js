@@ -15,6 +15,19 @@ jQuery(document).ready(function($) {
     $('#offcanvas-menu-close').toggleClass('active');
   });
 
+  $('body').on('click', '.officer', function(){
+    $('#dim-overlay').toggleClass('active');
+    var popup = $(this).children('.main-popup');
+    $(popup).toggleClass('active');
+  });
+
+  $('body').on('click', '.officers-popup-close', function(event){
+    $('#dim-overlay').toggleClass('active');
+    var popup = $(this).parents('.main-popup');
+    console.log(popup);
+    $(popup).toggleClass('active');
+    event.stopPropagation();
+  });
 
   
   $('.pb-gallery-wrapper').slick({
