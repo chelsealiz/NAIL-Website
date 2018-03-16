@@ -4,6 +4,13 @@ body.page-template-template-officers {
 	.officers {
 		@include xy-grid();
 		padding-top: 15px;
+		max-width: 1200px;
+		margin: auto;
+
+		@include breakpoint(medium up){
+			padding-top: auto;
+			padding: 40px 0 80px;
+		}
 
 		.officer {
 			@include xy-cell(12);
@@ -20,6 +27,10 @@ body.page-template-template-officers {
 			.name, .title {
 				margin-bottom: 0;
 				text-align: center;
+
+				@include breakpoint(medium up){
+					font-size: 25px;
+				}
 			}
 
 			.title {
@@ -38,6 +49,20 @@ body.page-template-template-officers {
 				right: 15px;
 				overflow: scroll;
 
+				@include breakpoint(medium up){
+					top: 50%;
+					left: 10%;
+					right: 10%;
+					bottom: auto;
+					overflow: unset;
+					transform: translateY(-50%);
+					height: 400px;
+				}
+
+				.clear {
+					clear: both;
+				}
+
 				&.active {
 					display: block;
 				}
@@ -48,6 +73,10 @@ body.page-template-template-officers {
 					right: 10px;
 					color: $white;
 					font-size: 35px;
+
+					@include breakpoint(medium up){
+						color: $black;
+					}
 				}
 
 				.popup-left {
@@ -55,10 +84,27 @@ body.page-template-template-officers {
 					background-position: top;
 					background-size: stretch;
 					background-repeat: no-repeat;
+
+					@include breakpoint(medium up){
+						width: 50%;
+						float: left;
+						min-height: inherit;
+						height: 400px;
+					}
 				}
 
 				.popup-right {
 					padding: 15px;
+
+					@include breakpoint(medium up){
+						width: 49%;
+						float: right;
+						padding: 25px 40px;
+
+						p {
+							font-size: 14px;
+						}
+					}
 
 					.name, .title {
 						text-align: left;

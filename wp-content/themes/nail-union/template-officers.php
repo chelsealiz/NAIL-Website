@@ -26,14 +26,15 @@ Template Name: Officers Template
 							<h2 class="title"><?php the_sub_field('title'); ?></h2>
 
 							<?php $img_url_full = wp_get_attachment_url(get_sub_field('image'), 'full'); ?>
-							<div class='main-popup' data-equalizer="officer-popup" data-equalize-on='medium'>
+							<div class='main-popup'>
 								<button class="officers-popup-close"><i class="fa fa-times" aria-hidden="true"></i></button>
-								<div class="popup-left" data-equalizer-watch="officer-popup" style="background-image: url(<?php echo $img_url_full; ?>);"></div>
-								<div class="popup-right" data-equalizer-watch="officer-popup">
+								<div class="popup-left" style="background-image: url(<?php echo $img_url_full; ?>);"></div>
+								<div class="popup-right">
 									<h2 class="name"><?php the_sub_field('name'); ?></h2>
 									<h2 class="title"><?php the_sub_field('title'); ?></h2>
 									<?php the_sub_field('bio_blurb'); ?>
 								</div>
+								<div class="clear"></div>
 							</div>
 						</div>
 					<?php endwhile; ?>
