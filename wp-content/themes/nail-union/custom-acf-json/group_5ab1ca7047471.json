@@ -92,7 +92,7 @@
                         {
                             "key": "field_5ab1cb3ae342c",
                             "label": "Links",
-                            "name": "links",
+                            "name": "member_links",
                             "type": "repeater",
                             "instructions": "",
                             "required": 0,
@@ -187,5 +187,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1521601403
+    "modified": 1521603505
 }
