@@ -1,0 +1,12 @@
+body.page-template-template-members-only {
+	.user-logged-out {
+		@include xy-grid();
+		max-width: 1000px;
+		padding: 30px 0;
+		margin: auto;
+
+		.message-container {
+			@include xy-cell(12);
+		}
+	}
+}
