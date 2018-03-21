@@ -21,17 +21,17 @@ Template Name: Members Only
 					<?php if( have_rows('members_only') ): ?>
 						<div class="dashboard-container">
 							<?php while( have_rows('members_only') ): the_row(); ?>
-								<?php if ( get_row_layout('text_field') ): ?>
-									<div class="dash-text-field">
+								<?php if ( get_row_layout() == 'text_field' ): ?>
+									<div class="dashboard-section dash-text-field">
 										<h2 class="section-title"><?php the_sub_field('title'); ?></h2>
 										<?php the_sub_field('text'); ?>
 									</div>
-								<?php elseif ( get_row_layout('list_of_links') ): ?>
-									<div class="dash-links">
+								<?php elseif ( get_row_layout() == 'list_of_links' ): ?>
+									<div class="dashboard-section dash-links">
 										<h2 class="section-title"><?php the_sub_field('title'); ?></h2>
-										<?php if( have_rows('member_links') ): ?>
+										<?php if( have_rows('links') ): ?>
 											<div class="dash-links-list">
-												<?php while ( have_rows('member_links') ) : the_row(); ?>
+												<?php while ( have_rows('links') ) : the_row(); ?>
 													<a href="<?php the_sub_field('link'); ?>"><?php the_sub_field('text'); ?></a>
 												<?php endwhile; ?>
 											</div>
