@@ -38,6 +38,11 @@ body.page-template-template-officers {
 
 			}
 
+			.main-img {
+				margin: auto;
+				display: block;
+			}
+
 			.main-popup {
 				display: none;
 				position: fixed;
@@ -81,8 +86,8 @@ body.page-template-template-officers {
 
 				.popup-left {
 					min-height: 200px;
-					background-position: top;
-					background-size: stretch;
+					background-position: center;
+					background-size: cover;
 					background-repeat: no-repeat;
 
 					@include breakpoint(medium up){

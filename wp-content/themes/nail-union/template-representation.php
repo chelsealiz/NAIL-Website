@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Officers Template
+Template Name: Representation Template
 */
 ?>
 
