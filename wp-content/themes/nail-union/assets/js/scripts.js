@@ -29,6 +29,20 @@ jQuery(document).ready(function($) {
     event.stopPropagation();
   });
 
+  $('body').on('click', '.lawyer', function(){
+    $('#dim-overlay').toggleClass('active');
+    var popup = $(this).children('.main-popup');
+    $(popup).toggleClass('active');
+  });
+
+  $('body').on('click', '.lawyers-popup-close', function(event){
+    $('#dim-overlay').toggleClass('active');
+    var popup = $(this).parents('.main-popup');
+    console.log(popup);
+    $(popup).toggleClass('active');
+    event.stopPropagation();
+  });
+
   
   $('.pb-gallery-wrapper').slick({
     prevArrow: '<button type="button" class="slick-arrow slick-prev"><i class="fa fa-angle-left" aria-hidden="true"></i></button>',
