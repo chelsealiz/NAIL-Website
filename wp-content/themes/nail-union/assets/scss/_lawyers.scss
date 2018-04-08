@@ -1,7 +1,11 @@
-body.page-template-template-officers {
+body.page-template-template-representation {
 	position: relative;
 
-	.officers {
+	.lawyer-wrap {
+		background-color: $light-gray;
+	}
+
+	.lawyers {
 		@include xy-grid();
 		padding-top: 15px;
 		max-width: 1200px;
@@ -12,7 +16,7 @@ body.page-template-template-officers {
 			padding: 40px 0 80px;
 		}
 
-		.officer {
+		.lawyer {
 			@include xy-cell(12);
 			padding: 10px 0;
 
@@ -24,18 +28,13 @@ body.page-template-template-officers {
 				cursor: pointer;
 			}
 
-			.name, .title {
+			.name {
 				margin-bottom: 0;
 				text-align: center;
 
 				@include breakpoint(medium up){
 					font-size: 25px;
 				}
-			}
-
-			.title {
-				font-size: 16px;
-
 			}
 
 			.main-img {
@@ -71,7 +70,7 @@ body.page-template-template-officers {
 					display: block;
 				}
 
-				.officers-popup-close {
+				.lawyers-popup-close {
 					position: absolute;
 					top: 10px;
 					right: 10px;
@@ -87,7 +86,7 @@ body.page-template-template-officers {
 
 				.popup-left {
 					min-height: 200px;
-					background-position: center;
+					background-position: top;
 					background-size: cover;
 					background-repeat: no-repeat;
 
@@ -114,12 +113,8 @@ body.page-template-template-officers {
 						}
 					}
 
-					.name, .title {
+					.name {
 						text-align: left;
-					}
-
-					.title {
-						padding-bottom: 20px;
 					}
 				}
 			}
@@ -128,20 +123,4 @@ body.page-template-template-officers {
 
 	}	
 
-}
-
-
-#dim-overlay {
-	display: none;
-	position: fixed;
-	z-index: 30;
-	background-color: rgba(0, 0, 0, 0.5);
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-
-	&.active {
-		display: block;
-	}
 }

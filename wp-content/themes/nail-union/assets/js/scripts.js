@@ -7,18 +7,21 @@ jQuery(document).ready(function($) {
     $('#offcanvas-menu').toggleClass('active');
     $('#offcanvas-menu-trigger').toggleClass('active');
     $('#offcanvas-menu-close').toggleClass('active');
+    $('body').toggleClass('noscroll');
   });
 
   $('body').on('click', '#offcanvas-menu-close', function(){
     $('#offcanvas-menu').toggleClass('active');
     $('#offcanvas-menu-trigger').toggleClass('active');
     $('#offcanvas-menu-close').toggleClass('active');
+    $('body').toggleClass('noscroll');
   });
 
   $('body').on('click', '.officer', function(){
     $('#dim-overlay').toggleClass('active');
     var popup = $(this).children('.main-popup');
     $(popup).toggleClass('active');
+    $('body').toggleClass('noscroll');
   });
 
   $('body').on('click', '.officers-popup-close', function(event){
@@ -27,12 +30,14 @@ jQuery(document).ready(function($) {
     console.log(popup);
     $(popup).toggleClass('active');
     event.stopPropagation();
+    $('body').toggleClass('noscroll');
   });
 
   $('body').on('click', '.lawyer', function(){
     $('#dim-overlay').toggleClass('active');
     var popup = $(this).children('.main-popup');
     $(popup).toggleClass('active');
+    $('body').toggleClass('noscroll');
   });
 
   $('body').on('click', '.lawyers-popup-close', function(event){
@@ -41,6 +46,7 @@ jQuery(document).ready(function($) {
     console.log(popup);
     $(popup).toggleClass('active');
     event.stopPropagation();
+    $('body').toggleClass('noscroll');
   });
 
   
