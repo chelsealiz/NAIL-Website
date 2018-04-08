@@ -4,29 +4,49 @@ body.page-template-template-representation {
 	.legal-section {
 		@include xy-grid();
 		padding-top: 25px;
-		max-width: 1200px;
+		max-width: 900px;
 		margin: auto;
 		padding-bottom: 45px;
 
 		@include breakpoint(medium up){
-			padding-top: auto;
-			padding: 40px 0 80px;
+			padding: 85px 0 80px;
 		}
 
 		.left-section {
 			display: block;
 			margin: auto;
+			@include xy-cell(12);
+
+			@include breakpoint(medium up){
+				@include xy-cell(4);
+				margin-top: initial;
+				margin-bottom: initial;
+				//padding-left: 8%;
+			}
 
 			.section-title {
 				text-align: center;
 				font-size: 25px;
 				color: $primary-red;
-				// text-transform: uppercase;	
+				
+				@include breakpoint(medium up){
+					text-transform: uppercase;
+					font-size: 35px;
+					text-align: left;	
+				}
 			}
 		}
 
 		.right-section {
 			padding: 0px 15px;
+			@include xy-cell(12);
+
+			@include breakpoint(medium up){
+				@include xy-cell(8);
+				p {
+					font-size: 15px;
+				}
+			}
 		}
 	}
 
@@ -35,11 +55,19 @@ body.page-template-template-representation {
 		padding-top: 25px;
 		padding-bottom: 45px;
 
+		@include breakpoint(medium up){
+			padding-top: 70px;
+		}
+
 		.section-title {
 			text-align: center;
 			font-size: 25px;
-			color: $dark-accent;
-			// text-transform: uppercase;	
+			color: $dark-accent; 
+
+			@include breakpoint(medium up){
+				text-transform: uppercase;
+				font-size: 35px;	
+			}
 		}
 	}
 
@@ -165,8 +193,16 @@ body.page-template-template-representation {
 		margin: auto;
 		padding: 45px 15px;
 
+		@include breakpoint(medium up){
+			padding: 65px 0;
+		}
+
 		p {
 			text-align: center;
+
+			@include breakpoint(medium up){
+				font-size: 20px;
+			}
 		}
 	}
 
