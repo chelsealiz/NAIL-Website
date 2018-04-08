@@ -1,13 +1,51 @@
 body.page-template-template-representation {
 	position: relative;
 
+	.legal-section {
+		@include xy-grid();
+		padding-top: 25px;
+		max-width: 1200px;
+		margin: auto;
+		padding-bottom: 45px;
+
+		@include breakpoint(medium up){
+			padding-top: auto;
+			padding: 40px 0 80px;
+		}
+
+		.left-section {
+			display: block;
+			margin: auto;
+
+			.section-title {
+				text-align: center;
+				font-size: 25px;
+				color: $primary-red;
+				// text-transform: uppercase;	
+			}
+		}
+
+		.right-section {
+			padding: 0px 15px;
+		}
+	}
+
 	.lawyer-wrap {
 		background-color: $light-gray;
+		padding-top: 25px;
+		padding-bottom: 45px;
+
+		.section-title {
+			text-align: center;
+			font-size: 25px;
+			color: $dark-accent;
+			// text-transform: uppercase;	
+		}
 	}
 
 	.lawyers {
 		@include xy-grid();
-		padding-top: 15px;
+		
 		max-width: 1200px;
 		margin: auto;
 
@@ -120,7 +158,16 @@ body.page-template-template-representation {
 			}
 		}
 
-
 	}	
+
+	.blurb-section {
+		max-width: 800px;
+		margin: auto;
+		padding: 45px 15px;
+
+		p {
+			text-align: center;
+		}
+	}
 
 }
