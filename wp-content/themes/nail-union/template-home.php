@@ -32,8 +32,7 @@ Template Name: Homepage Template
 			<div class="represent-section" style="background-image: url('<?php echo wp_get_attachment_image_src( get_field('representation_background'), 'full')[0]; ?>');">
 				<h2 class="represent-title"><?php the_field('representation_title'); ?></h2>
 				<div class="represent-wrap">
-					<div class="represent-left">
-						<img src="<?php echo wp_get_attachment_image_src( get_field('representation_image'), 'large')[0]; ?>">
+					<div class="represent-left"><img src="<?php echo wp_get_attachment_image_src( get_field('representation_image'), 'large')[0]; ?>">
 						</div>
 						<div class="represent-right">
 							<?php the_field('representation_content'); ?>
@@ -42,36 +41,30 @@ Template Name: Homepage Template
 					</div>
 				</div>
 
-				<!-- Remember to adjust this when it's done b/c this is hardcore dummy content -->
-				<div class='recent-news'>
-					<h2 class="news-section-title">Recent News</h2>
-					<div class="news-wrap">
-						<div class="news-article">
-							<a href="#" class="article-link">
-								<a href="https://placeholder.com"><img src="http://via.placeholder.com/250x250"></a>
-								<h3 class="news-title">Article Title</h3>
-								<p class="blurb">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut tellus lorem. Aliquam in sapien et orci condimentum bibendum. Maecenas nec nibh eu tortor dictum cursus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur nec commodo urna. Sed quis nibh ut enim feugiat suscipit.</p>
-							</a>
+				<?php $args = array('posts_per_page' => 3);
+				$the_query = new WP_Query( $args );
+
+				if ( $the_query->have_posts() ) : ?>
+					<div class='recent-news'>
+						<h2 class="news-section-title">Recent News</h2>
+						<div class="news-wrap">
+							<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+								<div class="news-article">
+									<a href="<?php the_permalink(); ?>" class="article-link"></a>
+									<?php echo get_the_post_thumbnail(); ?>
+									<h3 class="news-title"><?php the_title(); ?></h3>
+									<?php if ( get_field('blurb') ): ?>
+										<p class="blurb"><?php the_field('blurb'); ?></p>
+									<?php endif; ?>
+
+								</div>
+							<?php endwhile; ?>
 						</div>
-						<div class="news-article">
-							<a href="#" class="article-link">
-								<a href="https://placeholder.com"><img src="http://via.placeholder.com/250x250"></a>
-								<h3 class="news-title">Article Title</h3>
-								<p class="blurb">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut tellus lorem. Aliquam in sapien et orci condimentum bibendum. Maecenas nec nibh eu tortor dictum cursus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur nec commodo urna. Sed quis nibh ut enim feugiat suscipit.</p>
-							</a>
-						</div>
-						<div class="news-article">
-							<a href="#" class="article-link">
-								<a href="https://placeholder.com"><img src="http://via.placeholder.com/250x250"></a>
-								<h3 class="news-title">Article Title</h3>
-								<p class="blurb">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut tellus lorem. Aliquam in sapien et orci condimentum bibendum. Maecenas nec nibh eu tortor dictum cursus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur nec commodo urna. Sed quis nibh ut enim feugiat suscipit.</p>
-							</a>
+						<div class="link-wrap">
+							<a href="/news" class='news-link'>More News</a>
 						</div>
 					</div>
-					<div class="link-wrap">
-						<a href="/news" class='news-link'>More News</a>
-					</div>
-				</div>
+				<?php endif; wp_reset_postdata(); ?>
 
 			<?php endwhile; endif; ?>
 

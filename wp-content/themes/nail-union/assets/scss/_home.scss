@@ -161,7 +161,7 @@ body.home {
 		}
 
 		.news-wrap {
-			@include xy-grid;
+			@include xy-grid();
 			text-align: center;
 
 			.news-article {
@@ -171,6 +171,7 @@ body.home {
 
 				@include breakpoint(medium up){
 					@include xy-cell(4);
+					float: left;
 					padding-bottom: 0px;
 				}
 
