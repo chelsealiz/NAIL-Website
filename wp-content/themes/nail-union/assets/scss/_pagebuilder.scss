@@ -1,6 +1,18 @@
 .pb {
 	&-section {
+		padding: 10px 10px;
 
+		&:first-child {
+			padding-top: 40px;
+		}
+
+		&:last-child {
+			padding-bottom: 40px;
+		}
+
+		@include breakpoint(medium up){
+			padding: 40px 0;
+		}
 	}
 
 	&-wysiwyg {
@@ -11,5 +23,65 @@
 		.text-holder {
 			@include xy-cell(12);
 		}
+	}
+
+	&-fw-vid {
+
+	}
+
+	&-img-left {
+		.img-l {
+			min-height: 300px;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+		}
+
+		.text-r {
+
+		}
+	}
+
+	&-three-col {
+		.col-section {
+			padding: 0 10px;
+			padding-bottom: 10px;
+
+			&:last-child {
+				padding-bottom: 0;
+			}
+
+			img {
+				padding-bottom: 15px;
+			}
+		}
+	}
+
+	&-fw-img {
+		min-height: 400px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		padding: 0;
+		margin: 10px 0;
+	}
+
+	&-fw-quote {
+		.quote {
+			text-align: center;
+			color: $dark-accent;
+			font-family: $lora-b;
+			font-size: 30px;
+		}	
+
+		.attribution {
+			text-align: right;
+			font-size: 20px;
+			color: $dark-accent;
+		}
+	}
+
+	&-two-col {
+
 	}
 }
