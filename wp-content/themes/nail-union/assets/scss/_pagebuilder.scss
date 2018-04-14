@@ -1,0 +1,15 @@
+.pb {
+	&-section {
+
+	}
+
+	&-wysiwyg {
+		@include xy-grid();
+		max-width: 1200px;
+		margin: auto;
+
+		.text-holder {
+			@include xy-cell(12);
+		}
+	}
+}

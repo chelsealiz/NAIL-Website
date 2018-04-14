@@ -51,7 +51,9 @@ Template Name: Homepage Template
 							<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 								<div class="news-article">
 									<a href="<?php the_permalink(); ?>" class="article-link"></a>
-									<?php echo get_the_post_thumbnail(); ?>
+									<?php if (get_the_post_thumbnail()): ?>
+										<?php echo get_the_post_thumbnail(); ?>
+									<?php endif; ?>
 									<h3 class="news-title"><?php the_title(); ?></h3>
 									<?php if ( get_field('blurb') ): ?>
 										<p class="blurb"><?php the_field('blurb'); ?></p>
