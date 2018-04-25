@@ -124,18 +124,15 @@
 
 }
 
-
-
 //Off-Canvas Menu Styling
 #offcanvas-menu {
 	position: absolute;
-	top: 70px;
+	top: 60px;
 	left: 0;
 	right: 0;
 	max-height: 0;
 	background-color: $white;
 	z-index: 20;
-	
 	text-align: center;
 	transition: max-height ease-in-out 1000ms;
 	overflow: hidden;
@@ -151,5 +148,11 @@
 
 	ul {
 		padding-top: 10px;
+	}
+}
+
+body.home {
+	#offcanvas-menu {
+		top: 70px;
 	}
 }

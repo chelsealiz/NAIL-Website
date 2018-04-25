@@ -488,20 +488,20 @@ COMMENT FORM STYLES
 			&:last-child {
 				padding-bottom: 0;
 			}
+
+			&:nth-child(even) {
+				.left-img {
+					order: 2;
+				}
+
+				.right-txt {
+					order: 1;
+				}
+			}
 		}
 
 		&:last-child {
 			padding-bottom: 0;
-		}
-
-		&:nth-child(even) {
-			.left-img {
-				order: 2;
-			}
-
-			.right-txt {
-				order: 1;
-			}
 		}
 
 		.left-img {
