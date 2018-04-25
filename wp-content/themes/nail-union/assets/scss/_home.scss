@@ -239,6 +239,9 @@ body.home {
 	min-height: 375px;
 	color: $white;
 	position: relative;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 
 	&.no-img {
 		background-color: $light-gray;
