@@ -482,8 +482,26 @@ COMMENT FORM STYLES
 		@include xy-grid();
 		padding-bottom: 30px;
 
+		@include breakpoint(medium up){
+			padding: 0 20px 90px 20px;
+
+			&:last-child {
+				padding-bottom: 0;
+			}
+		}
+
 		&:last-child {
 			padding-bottom: 0;
+		}
+
+		&:nth-child(even) {
+			.left-img {
+				order: 2;
+			}
+
+			.right-txt {
+				order: 1;
+			}
 		}
 
 		.left-img {
@@ -508,6 +526,10 @@ COMMENT FORM STYLES
 					text-transform: uppercase;
 					letter-spacing: 1px;
 					color: $dark-accent;
+
+					@include breakpoint(medium up){
+						font-size: 30px;
+					}
 				}
 			}
 
