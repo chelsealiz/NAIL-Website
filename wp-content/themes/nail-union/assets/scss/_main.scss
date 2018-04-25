@@ -469,6 +469,65 @@ COMMENT FORM STYLES
 	margin: 0 20px 1.1em;
 }
 
+.article-holder {
+	padding-top: 30px;
+	max-width: 1200px;
+	margin: auto;
+
+	@include breakpoint(medium up){
+		padding-top: 50px;
+	}
+
+	.article {
+		@include xy-grid();
+		padding-bottom: 30px;
+
+		&:last-child {
+			padding-bottom: 0;
+		}
+
+		.left-img {
+			@include xy-cell(12);
+			padding-bottom: 15px;
+
+			@include breakpoint(medium up){
+				@include xy-cell(4);
+				padding-bottom: 0;
+			}
+		}
+
+		.right-txt {
+			@include xy-cell(12);
+
+			@include breakpoint(medium up){
+				@include xy-cell(8);
+			}
+
+			.title-link {
+				.article-title {
+					text-transform: uppercase;
+					letter-spacing: 1px;
+					color: $dark-accent;
+				}
+			}
+
+			.date, .blurb {
+				margin-bottom: 0px;
+			}
+
+			.date {
+				padding-bottom: 5px;
+				font-size: 14px;
+			}
+		}
+	}
+
+	.page-navigation {
+		text-align: center;
+	}
+	
+}
+
 /*********************
 SIDEBARS & ASIDES
 *********************/

@@ -1,32 +1,41 @@
 <?php get_header(); ?>
-			
-	<div id="content">
-	
-		<div id="inner-content" class="row">
-	
-		    <main id="main" class="large-8 medium-8 columns" role="main">
-		    
-			    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-			 
-					<!-- To see additional archive styles, visit the /parts directory -->
-					<?php get_template_part( 'parts/loop', 'archive' ); ?>
-				    
-				<?php endwhile; ?>	
 
-					<?php joints_page_navi(); ?>
-					
-				<?php else : ?>
-											
-					<?php get_template_part( 'parts/content', 'missing' ); ?>
-						
-				<?php endif; ?>
-																								
-		    </main> <!-- end #main -->
-		    
-		    <?php get_sidebar(); ?>
+<div id="content">
+	<div class="hero-section no-img">
+		<div class="title-content">
+			<h1 class="title">News</h1>
+		</div>
+	</div>
 
-		</div> <!-- end #inner-content -->
+	<div class="article-holder">
+		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-	</div> <!-- end #content -->
+				<div class="article">
+					<div class="left-img">
+						<?php the_post_thumbnail('small'); ?>
+					</div>
+
+					<div class="right-txt">
+						<a class="title-link" href="<?php echo get_permalink(); ?>"><h2 class="article-title"><?php the_title(); ?></h2></a>
+						<p class="date"><?php echo get_the_date(); ?></p>
+
+						<p class="blurb"><?php the_field('blurb', get_the_ID()); ?></p>
+					</div>
+
+				</div>
+
+
+			<?php endwhile; ?>
+
+			<?php joints_page_navi(); ?>
+
+			<?php else : ?>
+
+			<?php get_template_part( 'parts/content', 'missing' ); ?>
+
+		<?php endif; ?>
+	</div>
+
+</div> <!-- end #content -->
 
 <?php get_footer(); ?>
