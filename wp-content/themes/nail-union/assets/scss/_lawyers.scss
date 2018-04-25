@@ -140,28 +140,28 @@ body.page-template-template-representation {
 					position: absolute;
 					top: 10px;
 					right: 10px;
-					color: $white;
+					color: $black;
 					font-size: 35px;
 					cursor: pointer;
 
 					@include breakpoint(medium up){
-						color: $black;
 						top: 20px;
 						right: 20px;
 					}
 				}
 
 				.popup-left {
-					min-height: 200px;
-					background-position: top;
-					background-size: cover;
-					background-repeat: no-repeat;
-
+					display: none;
+					
 					@include breakpoint(medium up){
+						display: inline-block;
 						width: 50%;
 						float: left;
 						min-height: inherit;
 						height: 400px;
+						background-position: top;
+						background-size: cover;
+						background-repeat: no-repeat;
 					}
 				}
 
