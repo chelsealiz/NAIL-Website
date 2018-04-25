@@ -142,6 +142,7 @@ body.page-template-template-representation {
 					right: 10px;
 					color: $white;
 					font-size: 35px;
+					cursor: pointer;
 
 					@include breakpoint(medium up){
 						color: $black;
