@@ -16,7 +16,12 @@
 					</div>
 
 					<div class="right-txt">
-						<a class="title-link" href="<?php echo get_permalink(); ?>"><h2 class="article-title"><?php the_title(); ?></h2></a>
+						<?php if (get_field('external_link')): ?>
+							<a class="title-link" target="_blank" href="<?php the_field('external_post_link'); ?>"><h2 class="article-title"><?php the_title(); ?></h2></a>
+							<?php else: ?>
+							<a class="title-link" href="<?php echo get_permalink(); ?>"><h2 class="article-title"><?php the_title(); ?></h2></a>
+						<?php endif; ?>
+
 						<p class="date"><?php echo get_the_date(); ?></p>
 
 						<p class="blurb"><?php the_field('blurb', get_the_ID()); ?></p>

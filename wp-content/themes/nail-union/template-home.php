@@ -50,7 +50,11 @@ Template Name: Homepage Template
 						<div class="news-wrap">
 							<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 								<div class="news-article">
-									<a href="<?php the_permalink(); ?>" class="article-link"></a>
+									<?php if (get_field('external_link')): ?>
+										<a class="article-link" target="_blank" href="<?php the_field('external_post_link'); ?>"></a>
+										<?php else: ?>
+										<a class="article-link" href="<?php echo get_permalink(); ?>"></a>
+									<?php endif; ?>
 									<?php if (get_the_post_thumbnail()): ?>
 										<?php echo get_the_post_thumbnail(); ?>
 									<?php endif; ?>
