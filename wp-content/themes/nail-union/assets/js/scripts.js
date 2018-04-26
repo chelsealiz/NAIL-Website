@@ -24,10 +24,27 @@ jQuery(document).ready(function($) {
     $('body').toggleClass('noscroll');
   });
 
+  $('body').on('click', '#dim-overlay', function(){
+    $('#dim-overlay').toggleClass('active');
+    $('body').toggleClass('noscroll');
+
+    $('.officer').each(function() {
+      var pop = $(this).children('.main-popup');
+      if ( $(pop).hasClass('active') ) {
+        console.log(pop);
+        $(pop).toggleClass('active');
+      }
+    });
+    // $('.lawyer').each(function() {
+    //   if ( $(this).hasClass('active') ) {
+    //     $(this).removeClass('active');
+    //   }
+    // });
+  });
+
   $('body').on('click', '.officers-popup-close', function(event){
     $('#dim-overlay').toggleClass('active');
     var popup = $(this).parents('.main-popup');
-    console.log(popup);
     $(popup).toggleClass('active');
     event.stopPropagation();
     $('body').toggleClass('noscroll');
