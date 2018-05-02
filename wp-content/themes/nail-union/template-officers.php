@@ -26,10 +26,14 @@ Template Name: Officers Template
 							<h2 class="name"><?php the_sub_field('name'); ?></h2>
 							<h2 class="title"><?php the_sub_field('title'); ?></h2>
 
-							<?php $img_url_full = wp_get_attachment_url(get_sub_field('image'), 'large'); ?>
+							<?php $img_url_full = wp_get_attachment_image_src(get_sub_field('image'), 'small'); ?>
+							<?php $img_url_full = $img_url_full[0]; ?>
 							<div class='main-popup'>
 								<button class="officers-popup-close"><i class="fa fa-times" aria-hidden="true"></i></button>
-								<div class="popup-left" style="background-image: url(<?php echo $img_url_full; ?>);"></div>
+								<div class="popup-left">
+
+									<img class="left-img" src="<?php echo $img_url_full; ?>">
+								</div>
 								<div class="popup-right">
 									<h2 class="name"><?php the_sub_field('name'); ?></h2>
 									<h2 class="title"><?php the_sub_field('title'); ?></h2>
