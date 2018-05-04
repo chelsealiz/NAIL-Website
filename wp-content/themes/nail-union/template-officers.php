@@ -10,20 +10,12 @@ Template Name: Officers Template
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-			<?php if (get_field('header_image_mobile') && get_field('header_image_lg')): ?>
-				<div class="hero-section" data-interchange="[<?php the_field('header_image_mobile'); ?>, small], [<?php the_field('header_image_lg'); ?>, medium]">
-					<div class="dimmer"></div>
-					<div class="title-content">
-						<h1 class="title"><?php the_title(); ?></h1>
-					</div>
+			<div class="hero-section" data-interchange="[<?php the_field('header_image_mobile'); ?>, small], [<?php the_field('header_image_desktop'); ?>, medium]">
+				<div class="dimmer"></div>
+				<div class="title-content">
+					<h1 class="title"><?php the_title(); ?></h1>
 				</div>
-				<?php else: ?>
-				<div class="hero-section no-img">
-					<div class="title-content">
-						<h1 class="title"><?php the_title(); ?></h1>
-					</div>
-				</div>
-			<?php endif; ?>
+			</div>
 
 
 
