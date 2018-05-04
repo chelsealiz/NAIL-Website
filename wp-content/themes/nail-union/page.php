@@ -24,10 +24,15 @@
 				<?php if ( is_user_logged_in() ): ?>
 					<?php get_template_part( 'parts/pagebuilder' ); ?>
 					<?php else: ?>
-					<div class="user-logged-out">
-						<div class="message-container">
-							<?php the_field('not_logged_in', 'option'); ?>
-						</div>
+					<div class='message-container'>
+
+						<?php the_field('not_logged_in', 'option'); ?>
+						<?php wp_login_form(); ?>
+						<p id="loginnav">
+							<?php wp_register( '', ' | ' ); ?>
+							<a href="';
+								bloginfo( 'wpurl' );
+								echo '/wp-login.php?action=lostpassword" title="Password Lost and Found">Lost your password?</a></p>
 					</div>
 				<?php endif; ?>
 				<?php else: ?>

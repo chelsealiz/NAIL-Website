@@ -4,11 +4,15 @@ Template Name: Members Only
 */
 ?>
 
+
+
 <?php get_header(); ?>
+
 
 <div id="content">
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+
 
 			<div class="hero-section no-img">
 				<div class="title-content">
@@ -16,7 +20,8 @@ Template Name: Members Only
 				</div>
 			</div>
 
-			<?php if ( is_user_logged_in() ): ?>
+			<?php if (is_user_logged_in()): ?>
+
 				<div class="user-logged-in">
 					<?php if( have_rows('members_only') ): ?>
 						<div class="dashboard-container">
@@ -42,10 +47,19 @@ Template Name: Members Only
 						</div>
 					<?php endif; ?>
 				</div>
+
 				<?php else: ?>
+
 				<div class="user-logged-out">
-					<div class="message-container">
+					<div class='message-container'>
+
 						<?php the_field('not_logged_in', 'option'); ?>
+						<?php wp_login_form(); ?>
+						<p id="loginnav">
+							<?php wp_register( '', ' | ' ); ?>
+							<a href="';
+								bloginfo( 'wpurl' );
+								echo '/wp-login.php?action=lostpassword" title="Password Lost and Found">Lost your password?</a></p>
 					</div>
 				</div>
 			<?php endif; ?>
@@ -54,5 +68,7 @@ Template Name: Members Only
 		<?php endwhile; endif; ?>
 
 </div> <!-- end #content -->
+
+
 
 <?php get_footer(); ?>
