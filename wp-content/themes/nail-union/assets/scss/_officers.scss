@@ -1,18 +1,19 @@
 body.page-template-template-officers {
 	position: relative;
 
-	.officers {
+	.officers, .national-reps {
 		@include xy-grid();
 		padding-top: 15px;
 		max-width: 1200px;
 		margin: auto;
+		padding-bottom: 25px;
 
 		@include breakpoint(medium up){
 			padding-top: auto;
 			padding: 40px 0 80px;
 		}
 
-		.officer {
+		.officer, .national-rep {
 			@include xy-cell(12);
 			padding: 10px 0;
 
@@ -71,7 +72,7 @@ body.page-template-template-officers {
 					display: block;
 				}
 
-				.officers-popup-close {
+				.officers-popup-close, .reps-popup-close {
 					position: absolute;
 					top: 10px;
 					right: 10px;
@@ -128,8 +129,20 @@ body.page-template-template-officers {
 				}
 			}
 		}
+	}
 
+	.national-reps-wrap {
+		.national-rep-title {
+			color: $primary-red;
+			text-align: center;
+			text-transform: uppercase;
+			font-size: 30px;
 
+			@include breakpoint(medium up){
+				font-size: 35px;
+			}
+
+		}
 	}	
 
 }

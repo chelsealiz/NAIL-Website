@@ -35,11 +35,20 @@ jQuery(document).ready(function($) {
         $(pop).toggleClass('active');
       }
     });
-    // $('.lawyer').each(function() {
-    //   if ( $(this).hasClass('active') ) {
-    //     $(this).removeClass('active');
-    //   }
-    // });
+     $('.lawyer').each(function() {
+      var pop = $(this).children('.main-popup');
+      if ( $(pop).hasClass('active') ) {
+        console.log(pop);
+        $(pop).toggleClass('active');
+      }
+    });
+      $('.national-rep').each(function() {
+      var pop = $(this).children('.main-popup');
+      if ( $(pop).hasClass('active') ) {
+        console.log(pop);
+        $(pop).toggleClass('active');
+      }
+    });
   });
 
   $('body').on('click', '.officers-popup-close', function(event){
@@ -58,6 +67,22 @@ jQuery(document).ready(function($) {
   });
 
   $('body').on('click', '.lawyers-popup-close', function(event){
+    $('#dim-overlay').toggleClass('active');
+    var popup = $(this).parents('.main-popup');
+    console.log(popup);
+    $(popup).toggleClass('active');
+    event.stopPropagation();
+    $('body').toggleClass('noscroll');
+  });
+
+  $('body').on('click', '.national-rep', function(){
+    $('#dim-overlay').toggleClass('active');
+    var popup = $(this).children('.main-popup');
+    $(popup).toggleClass('active');
+    $('body').toggleClass('noscroll');
+  });
+
+  $('body').on('click', '.reps-popup-close', function(event){
     $('#dim-overlay').toggleClass('active');
     var popup = $(this).parents('.main-popup');
     console.log(popup);
